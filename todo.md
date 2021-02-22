@@ -1,7 +1,5 @@
 # TODO
 
-### TODO
-
 * /r repeat\(1d20+3,3\) = repeating rolls
 * /r repeat\(1d20+3,Jim,Matt,Michael\) = labeled rolls
 * /r 2d20+2d6 = add two types of dice together
@@ -15,7 +13,7 @@
 * Save character stats:
   * \`makeme=Votmead
   * \`savestats\(10,14,12,15,8,20\) 
-    * str,dex,con,int,wis,cha in order
+  * str,dex,con,int,wis,cha in order
 * Try and pull character stats out of d&d beyond
 * Containerize it 
 * Host it somewhere 
