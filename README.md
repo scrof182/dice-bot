@@ -1,10 +1,14 @@
 # Read Me
 
-## To Run
+## To Run Locally
 
-
-
-## 
+* Download and install Docker: [https://docs.docker.com/get-docker/](https://docs.docker.com/get-docker/)
+* Create a Discord bot account and add to channel: [https://discordpy.readthedocs.io/en/latest/discord.html](https://discordpy.readthedocs.io/en/latest/discord.html)
+* In creds.py, change the TOKEN variable to your new discord token
+* in the Dockerfile, change WORKDIR to the correct working directory
+* Build and run in docker
+  * `docker build -t dice-bot .`
+  * `docker run -it --rm --name dice-bot-running dice-bot`
 
 ## Usage
 
