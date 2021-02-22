@@ -24,3 +24,5 @@ Can call bot with either `roll` or `r`
 * Roll with disadvantage `/r 2d20l1`
 * Roll with advantage/disadvantage with mods `/r 2d20k1+4`
 
+\`\`[`https://app.gitbook.com/@selphmg/s/dice-bot-1/`](https://app.gitbook.com/@selphmg/s/dice-bot-1/)\`\`
+
