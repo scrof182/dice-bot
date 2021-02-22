@@ -13,7 +13,7 @@
 * Save character stats:
   * \`makeme=Votmead
   * \`savestats\(10,14,12,15,8,20\) 
-    * str,dex,con,int,wis,cha in order
+  * str,dex,con,int,wis,cha in order
 * Try and pull character stats out of d&d beyond
 * Containerize it 
 * Host it somewhere 
