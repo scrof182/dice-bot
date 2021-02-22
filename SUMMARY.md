@@ -1,5 +1,5 @@
 # Table of contents
 
-* [Readme](README.md)
+* [Read Me](README.md)
 * [TODO](todo.md)
 

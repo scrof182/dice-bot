@@ -1,4 +1,10 @@
-# Readme
+# Read Me
+
+## To Run
+
+
+
+## 
 
 ## Usage
 
@@ -13,8 +19,4 @@ Can call bot with either `roll` or `r`
 * Roll with advantage `/r 2d20k1`
 * Roll with disadvantage `/r 2d20l1`
 * Roll with advantage/disadvantage with mods `/r 2d20k1+4`
-
-
-
-* * 
 
