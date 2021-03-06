@@ -9,10 +9,13 @@
 * Build and run in docker
   * `docker build -t dice-bot .`
   * `docker run -it --rm --name dice-bot-running dice-bot`
+  * `docker run -d --rm --name dice-bot-running dice-bot`
+* Stop docker instance
+  * `docker stop dice-bot-running`
 
 ## Usage
 
-Accepts `?` or `!` or `/` or \`\`\`\`\` as input
+Accepts `'` as input
 
 Can call bot with either `roll` or `r`
 
