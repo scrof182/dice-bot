@@ -5,26 +5,24 @@ import re
 from creds import TOKEN
 
 
-BOT_PREFIX = ("?", "!", "/", "`")
+BOT_PREFIX = ("`")
 client = Bot(command_prefix=BOT_PREFIX)
 
 def roll_dice(faces):
 	value = random.randint(1, faces)
 	return(value)
 
-def single_die(single_die_tester):
-	new_reply = str(roll_dice(int(single_die_tester.group(1))))
+def single_die(face_1):
+	new_reply = str(roll_dice(int(face_1)))
 	return new_reply
 
-def single_die_p_mod(single_die_p_mod_tester):
-	rolled = roll_dice(int(single_die_p_mod_tester.group(1)))
-	added = int(single_die_p_mod_tester.group(3))
-	sign = str(single_die_p_mod_tester.group(2))
-	if sign == "-":
-		both = rolled - added
+def single_die_p_mod(face_1, sign_1, mod_1):
+	roll_1 = int(single_die(face_1))
+	if sign_1 == "-":
+		both = roll_1 - mod_1
 	else:
-		both = rolled + added
-	new_reply = str(rolled) +  sign + str(single_die_p_mod_tester.group(3)) + " = " + str(both)
+		both = roll_1 + mod_1
+	new_reply = str(roll_1) +  sign_1 + str(mod_1) + " = " + str(both)
 	return new_reply
 
 def multi_die(multi_die_tester):
@@ -180,10 +178,14 @@ async def roll(ctx, arg):
 	advantage_mod_tester = advantage_mod_parser.match(arg)
 
 	if single_die_tester is not None:
-		new_reply = single_die(single_die_tester)
+		face_1 = int(single_die_tester.group(1))
+		new_reply = single_die(face_1)
 
 	elif single_die_p_mod_tester is not None:
-		new_reply = single_die_p_mod(single_die_p_mod_tester)
+		face_1 = int(single_die_p_mod_tester.group(1))
+		sign_1 = str(single_die_p_mod_tester.group(2))
+		mod_1 = int(single_die_p_mod_tester.group(3))
+		new_reply = single_die_p_mod(face_1, sign_1, mod_1)
 
 	elif multi_die_tester is not None:
 		new_reply = multi_die(multi_die_tester)
